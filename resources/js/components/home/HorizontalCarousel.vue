@@ -1,7 +1,17 @@
 <template>
     <div class="bg-primary py-24">
-        <div class="max-w-7xl mx-auto">
-            <swiper :slides-per-view="1.9" :space-between="30">
+        <div class="max-w-7xl mx-auto p-4">
+            <swiper :breakpoints="{
+                320: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 20
+                },
+    
+                640: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 40
+                }
+            }">
                 <swiper-slide>
                     <img src="../../../img/carousel/1.jpg" alt="">
                     <h2 class="text-5xl py-8 uppercase">The Concept</h2>
@@ -12,8 +22,8 @@
                 </swiper-slide>
 
                 <swiper-slide>
-                    <div class="flex justify-end relative w-full top-12">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="309.828" height="285.941"
+                    <div class="lg:flex hidden justify-end relative w-full top-12">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="309.828" height="285.941"
                             viewBox="0 0 309.828 285.941">
                             <g id="Group_2688" data-name="Group 2688"
                                 transform="translate(252.514 313.445) rotate(-163)">

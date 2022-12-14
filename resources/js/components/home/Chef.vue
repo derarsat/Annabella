@@ -12,7 +12,7 @@
                     </svg>
 
                     <div class="hidden lg:block w-full h-full border-2 border-dark absolute top-6 left-6 z-1"></div>
-                    <img src="../../../img/chef.webp" alt="Annabella Chef" class="z-2 absolute top-0 left-0 w-full">
+                    <img src="../../../img/chef.webp" alt="Annabella Chef" class="z-2 static lg:absolute top-0 left-0 w-full">
                 </div>
                 <div class="max-w-4xl mx-auto">
                     <h1 class="font-Bodoni font-medium text-5xl lg:text-6xl text-center py-20" style="letter-spacing: 2px">

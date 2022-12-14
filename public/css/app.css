@@ -434,6 +434,9 @@ video {
     max-width: 1536px;
   }
 }
+.static{
+  position: static;
+}
 .fixed{
   position: fixed;
 }
@@ -1063,6 +1066,9 @@ body{
   opacity: 0;
 }
 @media (min-width: 1024px){
+  .lg\:absolute{
+    position: absolute;
+  }
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
   }
@@ -1077,6 +1083,9 @@ body{
   }
   .lg\:flex{
     display: flex;
+  }
+  .lg\:grid{
+    display: grid;
   }
   .lg\:hidden{
     display: none;
@@ -1104,6 +1113,9 @@ body{
   }
   .lg\:justify-center{
     justify-content: center;
+  }
+  .lg\:p-0{
+    padding: 0px;
   }
   .lg\:py-20{
     padding-top: 5rem;

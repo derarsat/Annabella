@@ -12,7 +12,7 @@
                     Book your table now or contact us on the numbers below. </p>
             </div>
             <div class="max-w-full lg:max-w-5xl mx-auto py-12">
-                <form class="grid grid-cols-1 lg:grid-cols-6 gap-6 " @submit.prevent="submit()">
+                <form class="flex flex-col lg:grid grid-cols-6 gap-6 p-4 lg:p-0 " @submit.prevent="submit()">
                     <input v-model="name" required type="text" placeholder="Your Name" class="col-span-1 lg:col-span-2 ">
                     <input v-model="email" required type="email" placeholder="Your Email" class="col-span-1 lg:col-span-4">
                     <input v-model="date" id="date" required type="date" class="col-span-1 lg:col-span-2">
