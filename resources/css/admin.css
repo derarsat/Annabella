@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    max-width: 1440px;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: Drive;
+    src: url("../fonts/Drive-Bold.otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Drive;
+    src: url("../fonts/Drive-Medium.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Drive;
+    src: url("../fonts/Drive-Regular.otf");
+    font-weight: 400;
+}
+.admin-title{
+    @apply text-3xl font-medium py-6 flex items-center justify-between
+}
+.admin-title a{
+    @apply bg-primary text-white rounded-md text-lg px-4 py-2
+}
+
+*{
+    @apply outline-none
+}
+
+.input-group {
+    @apply mb-6
+}
+
+label {
+    @apply block font-semibold mb-3
+}
+
+input,textarea,select {
+    @apply h-11 w-full border-2 border-primary rounded-md px-4 focus:ring-2 focus:ring-primary
+}
+textarea{
+    @apply h-24
+}
+input[type=checkbox] {
+    @apply w-4 h-4
+}
+input[type=submit]{
+    @apply bg-primary text-white capitalize inline-block
+}
+.error-label{
+    @apply text-pink font-medium mt-2 block text-sm
+}
+table{
+    @apply w-full
+}
+th{
+    @apply py-4
+}
+td,th{
+    @apply px-4 text-left
+}
+table,tr{
+    @apply border border-dark border-opacity-40
+}
+tbody td{
+    @apply py-2
+}

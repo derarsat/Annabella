@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply max-h-screen overflow-x-hidden
+}
+.container{
+    max-width: 100%;
+}
+@media (max-width:600px){
+    .container{
+        padding:0 10px
+    }
+}
+@font-face {
+    font-family: Drive;
+    src: url("../fonts/Drive-Bold.otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Drive;
+    src: url("../fonts/Drive-Medium.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Drive;
+    src: url("../fonts/Drive-Regular.otf");
+    font-weight: 400;
+}
+
+.router-link-exact-active{
+    @apply text-dark
+}
+
+.common-section{
+    @apply max-w-6xl mx-auto py-24
+}
+.swiper-slide{
+    @apply relative
+}
