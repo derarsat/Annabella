@@ -13,19 +13,18 @@
             </div>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto py-32">
+    <div class="max-w-7xl mx-auto py-32 px-4">
         <div class="grid grid-cols-5">
-            <div>
-                <div class="flex flex-col text-2xl gap-4 items-start pt-24">
+            <div class=" pt-0 lg:pt-24 mb-6 lg:mb-0">
+                <div class="flex flex-row lg:flex-col text-2xl gap-4 items-start">
                     <button :class="(active.name == menu.name) ? '' : 'opacity-50'" @click="active = menu"
                         v-for="menu in menus" :key="menu" v-text="menu.name"></button>
                 </div>
             </div>
 
-            <div class="col-span-4">
+            <div class="col-span-5 lg:col-span-4">
                 <div class="text-3xl mb-12 flex items-center justify-between">
                     {{ active.name }}
-
                     <div class="flex items-center gap-4">
                         <button class="button-prev button-prev">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -43,12 +42,12 @@
                         </button>
                     </div>
                 </div>
-                <swiper :modules="[Navigation]" :slides-per-view="1.5" :space-between="40" :navigation="{
+                <swiper :modules="[Navigation]" :slides-per-view="1.3" :space-between="40" :navigation="{
                     nextEl: '.button-next',
                     prevEl: '.button-prev'
                 }">
                     <swiper-slide v-for="cuisine in active.cuisines" :key="cuisine.name">
-                        <img :src="(cuisine.image)" alt="">
+                        <img :src="(cuisine.image)" alt="" class="w-full">
                         <h1 class="text-3xl mt-4 mb-3">{{cuisine.name}}</h1>
                         <h1>{{cuisine.desc}}</h1>
                     </swiper-slide>

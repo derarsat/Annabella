@@ -1,8 +1,8 @@
 <template>
     <div class="bg-dark font-normal">
         <div class="container pt-10 pb-4">
-            <div class="grid grid-cols-3 text-white text-lg">
-                <div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 text-white text-lg gap-4">
+                <div class="pt-6 lg:bt-0">
                     <svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="185.58" height="64.162"
                         viewBox="0 0 185.58 64.162">
                         <path id="Path_11" data-name="Path 11"
@@ -51,12 +51,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-2 justify-center items-center">
+                <div class="flex flex-col gap-2 justify-start lg:justify-center items-start lg:items-center">
                     <router-link style="color:white" :to="{ name: 'Home' }">Home</router-link>
                     <router-link style="color:white" :to="{ name: 'Menu' }">Menu</router-link>
                     <router-link style="color:white" :to="{ name: 'Gallery' }">Gallery</router-link>
                 </div>
-                <div class="flex items-center justify-center">
+                <div class="flex items-start lg:items-center justify-start lg:justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="291" height="113" viewBox="0 0 291 113">
                         <g id="Group_2718" data-name="Group 2718" transform="translate(-140 -11588)">
                             <text id="Levels_Mall_Northern_Ring_Road_Riyadh_Saudi_Arabia" data-name="Levels Mall, Northern Ring Road,

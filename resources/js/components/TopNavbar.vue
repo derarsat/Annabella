@@ -3,7 +3,9 @@
         <div class="bg-primary flex p-6 text-white absolute h-screen z-20 w-screen flex-col gap-4 text-lg"
             v-if="showMenu">
             <div class="flex items-center justify-between">
-                <img src="../../img/annabella.svg" alt="Annabella" class="w-40  pb-4">
+                <router-link to="/">
+                    <img src="../../img/annabella.svg" alt="Annabella" class="w-40  pb-4">
+                </router-link>
                 <button @click="showMenu = false">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
@@ -23,7 +25,10 @@
                     <router-link :to="{ name: 'Menu' }">Menu</router-link>
                     <router-link :to="{ name: 'Gallery' }">Gallery</router-link>
                 </nav>
-                <img src="../../img/annabella.svg" alt="Annabella" class="w-56">
+                <router-link to="/">
+                    <img src="../../img/annabella.svg" alt="Annabella" class="w-56">
+
+                </router-link>
                 <a href="#reserve" class="bg-dark px-4 py-2 rounded-md text-white">Reservation</a>
             </div>
 
@@ -51,7 +56,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useRoute } from 'vue-router'
 
 const showMenu = ref(false)
+const route = useRoute()
+
+watch(
+    () => route.path,
+    async newPath => {
+        showMenu.value = false
+    }
+)
 </script>

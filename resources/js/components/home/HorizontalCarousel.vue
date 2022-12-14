@@ -4,7 +4,7 @@
             <swiper :slides-per-view="1.9" :space-between="30">
                 <swiper-slide>
                     <img src="../../../img/carousel/1.jpg" alt="">
-                    <h2 class="text-7xl py-8 uppercase">The Concept</h2>
+                    <h2 class="text-5xl py-8 uppercase">The Concept</h2>
                     <p class="text-lg capitalize">
                         Annabella launched in Riyadh, KSA to bring the kingdom some of the best Italian cuisines out
                         there with a rich variety of dishes designed to charm & mesmerize.
@@ -45,7 +45,7 @@
                     </div>
 
                     <img src="../../../img/carousel/2.jpg" alt="">
-                    <h2 class="text-7xl py-8 uppercase">Culturally Modern</h2>
+                    <h2 class="text-5xl py-8 uppercase">Culturally Modern</h2>
                     <p class="text-lg capitalize">
                         The concept of Annabella exudes character & creates an inspiring combination of a contemporary
                         ambiance with a traditional approach to cuisine.
@@ -57,7 +57,7 @@
 
                 <swiper-slide>
                     <img src="../../../img/carousel/3.jpg" alt="">
-                    <h2 class="text-7xl py-8 uppercase">Magically crafted</h2>
+                    <h2 class="text-5xl py-8 uppercase">Magically crafted</h2>
                     <p class="text-lg capitalize">
                         With the help of famous italian Chef nicola offredi, Annabella brings authentic dishes to saudi
                         arabia from the coasts,mountains, and cities of gorgeous italy.

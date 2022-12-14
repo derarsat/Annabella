@@ -702,6 +702,9 @@ video {
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
+.flex-row{
+  flex-direction: row;
+}
 .flex-col{
   flex-direction: column;
 }
@@ -710,6 +713,9 @@ video {
 }
 .items-center{
   align-items: center;
+}
+.justify-start{
+  justify-content: flex-start;
 }
 .justify-end{
   justify-content: flex-end;
@@ -898,6 +904,15 @@ video {
 .pb-6{
   padding-bottom: 1.5rem;
 }
+.pt-12{
+  padding-top: 3rem;
+}
+.pt-0{
+  padding-top: 0px;
+}
+.pt-6{
+  padding-top: 1.5rem;
+}
 .text-center{
   text-align: center;
 }
@@ -1054,6 +1069,9 @@ body{
   .lg\:col-span-4{
     grid-column: span 4 / span 4;
   }
+  .lg\:mb-0{
+    margin-bottom: 0px;
+  }
   .lg\:block{
     display: block;
   }
@@ -1075,9 +1093,24 @@ body{
   .lg\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:flex-col{
+    flex-direction: column;
+  }
+  .lg\:items-center{
+    align-items: center;
+  }
+  .lg\:justify-center{
+    justify-content: center;
+  }
   .lg\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  .lg\:pt-24{
+    padding-top: 6rem;
   }
   .lg\:text-6xl{
     font-size: 3.75rem;
