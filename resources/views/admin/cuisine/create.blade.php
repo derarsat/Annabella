@@ -30,7 +30,7 @@
                     </svg>
                     <span class="mb-2 text-sm  block "><span
                             class="font-semibold">Click to upload</span> or drag and drop</span>
-                    <p class="text-xs ">SVG, PNG, JPG, JPEG (450px750px)</p>
+                    <p class="text-xs ">SVG, PNG, JPG, JPEG</p>
                 </span>
                 <input id="image" name="image" type="file" class="hidden"
                        accept="image/png, image/jpg, image/svg, image/jpeg"/>

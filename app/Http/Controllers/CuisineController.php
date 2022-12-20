@@ -99,7 +99,7 @@ class CuisineController extends Controller
     public function update(Request $request, Cuisine $cuisine)
     {
         $validated = $request->validate([
-            'name' => 'required|max:255|unique:cuisine,name,' . $cuisine->id,
+            'name' => 'required|max:255|unique:cuisines,name,' . $cuisine->id,
             'desc' => 'required',
             'menu' => 'required',
         ]);
@@ -108,7 +108,7 @@ class CuisineController extends Controller
         $cuisine->desc = $validated["desc"];
         if ($request->file('image')) {
             $imageFile = $request->file('image');
-            $imagePath = 'menus/';
+            $imagePath = 'cuisines/';
             $imageUrl = $this->imageUploader($imageFile, $imagePath);
             $cuisine->image = $imageUrl;
         }

@@ -18,6 +18,11 @@
                         <h2 class="text-2xl">{{ cuisine.desc }}</h2>
                     </swiper-slide>
                 </swiper>
+
+                <div class="flex items-center justify-center gap-4 mt-12">
+                    <router-link class="bg-dark text-white px-4 py-2 rounded" to="/menu">See all menu</router-link>
+                    <button class="border border-dark px-4 py-2 rounded">Download menu</button>
+                </div>
             </div>
         </div>
     </div>
