@@ -52,14 +52,19 @@ class CuisineController extends Controller
         $cuisine->name = $validated["name"];
         $cuisine->desc = $validated["desc"];
         $imageFile = $request->file('image');
+        if ($request->file('featured_image')) {
+            $imageFile = $request->file('featured_image');
+            $imagePath = 'cuisines/';
+            $imageUrl = $this->imageUploader($imageFile, $imagePath);
+            $cuisine->featured_image = $imageUrl;
+        }
         $imagePath = 'cuisines/';
         $imageUrl = $this->imageUploader($imageFile, $imagePath);
         $cuisine->image = $imageUrl;
         $cuisine->menu_id = $validated["menu"];
-        if(isset($request->top)){
+        if (isset($request->top)) {
             $cuisine->top = true;
-        }
-        else {
+        } else {
             $cuisine->top = false;
         }
         $cuisine->save();
@@ -111,6 +116,12 @@ class CuisineController extends Controller
             $imagePath = 'cuisines/';
             $imageUrl = $this->imageUploader($imageFile, $imagePath);
             $cuisine->image = $imageUrl;
+        }
+        if ($request->file('featured_image')) {
+            $imageFile = $request->file('featured_image');
+            $imagePath = 'cuisines/';
+            $imageUrl = $this->imageUploader($imageFile, $imagePath);
+            $cuisine->featured_image = $imageUrl;
         }
         $cuisine->menu_id = $validated["menu"];
         $cuisine->save();

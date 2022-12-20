@@ -62,7 +62,13 @@ Route::get('/menus', function () {
 Route::get('/top-cuisines', function () {
     $cuisines = Cuisine::where("top", "=", true)->get();
     foreach ($cuisines as &$cuisine) {
-        $cuisine["image"] = @App::make('url')->to('/') . '/storage' . $cuisine->image;
+       if($cuisine->featured_image){
+        $cuisine["featured_image"] = @App::make('url')->to('/') . '/storage' . $cuisine->featured_image;
+       }
+       else {
+        $cuisine["featured_image"] = @App::make('url')->to('/') . '/storage' . $cuisine->image;
+
+       }
     }
     return response()->json($cuisines);
 });

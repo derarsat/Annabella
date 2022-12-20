@@ -50,6 +50,12 @@ class GalleryImageController extends Controller
         $imageFile = $request->file('image');
         $imagePath = 'gallery-images/';
         $imageUrl = $this->imageUploader($imageFile, $imagePath);
+        if ($request->file('featured_image')) {
+            $imageFile = $request->file('featured_image');
+            $imagePath = 'gallery/';
+            $imageUrl = $this->imageUploader($imageFile, $imagePath);
+            $gallery_image->featured_image = $imageUrl;
+        }
         $gallery_image->url = $imageUrl;
         $gallery_image->save();
         return redirect(route('gallery-images.index'));

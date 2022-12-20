@@ -13,7 +13,7 @@
 
                 <swiper :slides-per-view="2.9" :space-between="30">
                     <swiper-slide v-for="cuisine in cuisines" :key="cuisine.id">
-                        <img :src="cuisine.image" alt="">
+                        <img :src="cuisine.featured_image" alt="">
                         <h1 class="text-3xl mt-2">{{ cuisine.name }}</h1>
                         <h2 class="text-2xl">{{ cuisine.desc }}</h2>
                     </swiper-slide>
