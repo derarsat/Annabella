@@ -41,7 +41,7 @@
         </div>
         <div class="input-group">
             <label for="desc">Description</label>
-            <textarea name="desc" required></textarea> @error('desc')
+            <textarea name="desc" ></textarea> @error('desc')
             <span class="error-label" role="alert">
             <strong>{{ $message }}</strong>
         </span> @enderror
