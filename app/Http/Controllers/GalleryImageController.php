@@ -52,7 +52,7 @@ class GalleryImageController extends Controller
         $imageUrl = $this->imageUploader($imageFile, $imagePath);
         if ($request->file('featured_image')) {
             $imageFile = $request->file('featured_image');
-            $imagePath = 'gallery/';
+            $imagePath = 'gallery-images/';
             $imageUrl = $this->imageUploader($imageFile, $imagePath);
             $gallery_image->featured_image = $imageUrl;
         }
@@ -80,7 +80,8 @@ class GalleryImageController extends Controller
      */
     public function edit(GalleryImage $galleryImage)
     {
-        //
+        return view('admin.gallery.edit', [ "gallery_image" => $galleryImage]);
+
     }
 
     /**
@@ -92,7 +93,30 @@ class GalleryImageController extends Controller
      */
     public function update(Request $request, GalleryImage $galleryImage)
     {
-        //
+        $validated = $request->validate([
+            'grid' => 'required|numeric|min:1|max:12',
+            'featured' => "nullable"
+        ]);
+        $galleryImage->grid = $validated["grid"];
+        if ($request->has("featured")) {
+            $galleryImage->featured = true;
+        } else {
+            $galleryImage->featured = false;
+        }
+        if ($request->file('featured_image')) {
+            $imageFile = $request->file('featured_image');
+            $imagePath = 'gallery-images/';
+            $imageUrl = $this->imageUploader($imageFile, $imagePath);
+            $galleryImage->featured_image = $imageUrl;
+        }
+        if ($request->file('image')) {
+            $imageFile = $request->file('image');
+            $imagePath = 'gallery-images/';
+            $imageUrl = $this->imageUploader($imageFile, $imagePath);
+            $galleryImage->url = $imageUrl;
+        }
+        $galleryImage->save();
+        return redirect(route('gallery-images.index'));
     }
 
     /**

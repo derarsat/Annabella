@@ -68,7 +68,6 @@
             </div>
             @if ($cuisine->featured_image)
             <img src="{{ @App::make('url')->to('/') . '/storage' . $cuisine->featured_image}}"  class="w-32" alt="">
-                
             @endif
         </div>
         <div class="input-group">

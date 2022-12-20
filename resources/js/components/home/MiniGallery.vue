@@ -13,7 +13,7 @@
         <div class="common-section relative">
             <div class="grid grid-cols-3 gap-6 text-dark" v-if="images.length > 0">
                 <div v-for="image in images" :key="image">
-                    <img :src="image.url" alt="">
+                    <img :src="image.featured_image" alt="">
                 </div>
             </div>
         </div>

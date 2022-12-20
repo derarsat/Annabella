@@ -15,7 +15,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web']], function () {
     Route::resource("menus", MenuController::class);
     Route::resource("cuisines", CuisineController::class);
     Route::get("reservations", function () {
-        $reservations = Reservation::orderBy("id","DESC")->orderBy("archived")->get();
+        $reservations = Reservation::orderBy("id", "DESC")->orderBy("archived")->get();
         return view("admin.reservations", ["reservations" => $reservations]);
     });
 
@@ -33,7 +33,11 @@ Route::get('/', function () {
 Route::get('/front-gallery-images', function () {
     $images = \App\Models\GalleryImage::where("featured", "=", true)->get();
     foreach ($images as $image) {
-        $image->url = @App::make('url')->to('/') . '/storage' . $image->url;
+        if ($image->featured_image) {
+            $image->featured_image = @App::make('url')->to('/') . '/storage' . $image->featured_image;
+        } else {
+            $image->featured_image = @App::make('url')->to('/') . '/storage' . $image->url;
+        }
     }
     return response()->json([
         "images" => $images
@@ -62,13 +66,11 @@ Route::get('/menus', function () {
 Route::get('/top-cuisines', function () {
     $cuisines = Cuisine::where("top", "=", true)->get();
     foreach ($cuisines as &$cuisine) {
-       if($cuisine->featured_image){
-        $cuisine["featured_image"] = @App::make('url')->to('/') . '/storage' . $cuisine->featured_image;
-       }
-       else {
-        $cuisine["featured_image"] = @App::make('url')->to('/') . '/storage' . $cuisine->image;
-
-       }
+        if ($cuisine->featured_image) {
+            $cuisine["featured_image"] = @App::make('url')->to('/') . '/storage' . $cuisine->featured_image;
+        } else {
+            $cuisine["featured_image"] = @App::make('url')->to('/') . '/storage' . $cuisine->image;
+        }
     }
     return response()->json($cuisines);
 });
