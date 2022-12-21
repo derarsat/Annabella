@@ -16,7 +16,9 @@
     <tbody>
         @foreach($menus as $menu)
             <tr>
+                @if ($menu->name)
                 <td>{{$menu->name}}</td>
+                @endif
                 <td></td>
                 <td>
                     <a class="inline-flex items-center bg-primary text-white px-2 py-1 rounded gap-2 text-sm" href="{{ @App::make('url')->to('/').'/storage'.$menu->pdf }}" alt="" class="w-full rounded-md">
