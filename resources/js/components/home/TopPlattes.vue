@@ -21,7 +21,7 @@
 
                 <div class="flex items-center justify-center gap-4 mt-12">
                     <router-link class="bg-dark text-white px-4 py-2 rounded" to="/menu">See all menu</router-link>
-                    <button class="border border-dark px-4 py-2 rounded">Download menu</button>
+                    <a target="_blank" href="/Anabella_qr_menu.pdf" class="border border-dark px-4 py-2 rounded">Download menu</a>
                 </div>
             </div>
         </div>

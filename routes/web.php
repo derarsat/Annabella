@@ -56,6 +56,7 @@ Route::get('/gallery', function () {
 Route::get('/menus', function () {
     $menus = Menu::with("cuisines")->get();
     foreach ($menus as &$menu) {
+        $menu["pdf"] = @App::make('url')->to('/') . '/storage' . $menu->pdf;
         foreach ($menu["cuisines"] as &$cuisine) {
             $cuisine["image"] = @App::make('url')->to('/') . '/storage' . $cuisine->image;
         }

@@ -103,7 +103,9 @@ var _hoisted_8 = {
 var _hoisted_9 = {
   "class": "flex items-center justify-center gap-4 mt-12"
 };
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  target: "_blank",
+  href: "/Anabella_qr_menu.pdf",
   "class": "border border-dark px-4 py-2 rounded"
 }, "Download menu", -1 /* HOISTED */);
 

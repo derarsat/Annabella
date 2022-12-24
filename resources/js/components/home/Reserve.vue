@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div id="reserve">
         <div class="bg-primary">
             <div class="text-center  max-w-3xl mx-auto relative">
@@ -82,4 +82,8 @@ select {
     background-image: linear-gradient(to top, rgba(255, 0, 0, 0), #719C53);
     @apply absolute w-full h-full
 }
-</style>
+</style> -->
+<template>
+    
+</template>
+<script></script>

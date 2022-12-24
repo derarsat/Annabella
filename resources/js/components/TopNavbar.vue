@@ -1,5 +1,6 @@
 <template>
-    <div class="bg-primary relative">
+<div class="relative">
+    <div class="bg-primary sticky top-1">
         <div class="bg-primary flex p-6 text-white absolute h-screen z-20 w-screen flex-col gap-4 text-lg"
             v-if="showMenu">
             <div class="flex items-center justify-between">
@@ -29,7 +30,7 @@
                     <img src="../../img/annabella.svg" alt="Annabella" class="w-56">
 
                 </router-link>
-                <a href="#reserve" class="bg-dark px-4 py-2 rounded-md text-white">Reservation</a>
+                <a href="https://www.sevenrooms.com/reservations/annabellasaudi/website" target="_blank" class="bg-dark px-4 py-2 rounded-md text-white">Reservation</a>
             </div>
 
             <div class="flex lg:hidden items-center justify-between pt-8">
@@ -53,6 +54,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script setup>

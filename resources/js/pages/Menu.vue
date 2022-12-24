@@ -16,9 +16,10 @@
     <div class="max-w-7xl mx-auto py-32 px-4">
         <div class="grid grid-cols-5">
             <div class=" pt-0 lg:pt-24 mb-6 lg:mb-0">
-                <div class="flex flex-row lg:flex-col text-2xl gap-4 items-start">
+                <div class="flex flex-row lg:flex-col text-2xl gap-4 items-start [&>*]:flex-shrink-0">
                     <button :class="(active.name == menu.name) ? '' : 'opacity-50'" @click="active = menu"
                         v-for="menu in menus" :key="menu" v-text="menu.name"></button>
+                        <a class="text-primary underline text-base" :href="active.pdf" target="_blank">Download all menu</a>
                 </div>
             </div>
 
