@@ -42,3 +42,6 @@ body{
 .swiper-slide{
     @apply relative
 }
+a,button{
+    @apply hover:scale-105 transition
+}

@@ -4,14 +4,18 @@
         </Component>
         <div class="container">
             <div class="common-section" style="min-height: 400px;">
-                <h1 v-if="done" class=" font-Bodoni font-medium text-5xl lg:text-6xl text-center py-20" style="letter-spacing: 2px">
-                    Unique flavors of <span class="font-bold">Italian Cuisine</span> that bring authenticity to your
-                    taste
-                </h1>
-            <lottie-player style="width:300px;margin:auto;margin-bottom: 100px;" v-if="!done" src="/home-page-animation.json" autoplay></lottie-player>
+                <transition name="fade">
+                    <h1 v-if="done" class=" font-Bodoni font-medium text-5xl lg:text-6xl text-center py-20"
+                        style="letter-spacing: 2px">
+                        Unique flavors of <span class="font-bold">Italian Cuisine</span> that bring authenticity to your
+                        taste
+                    </h1>
+                </transition>
+                    <lottie-player style="width:300px;margin:auto" v-if="!done"
+                    src="/home-page-animation.json" autoplay></lottie-player>
             </div>
         </div>
-        <div  class="absolute -bottom-24 flex w-full items-center justify-center">
+        <div class="absolute -bottom-24 flex w-full items-center justify-center">
             <div class="w-48 h-48 p-4 bg-primary rounded-full flex items-center justify-center">
                 <img v-if="done" src="../../../img/women.svg" alt="">
             </div>
@@ -21,13 +25,13 @@
 </template>
 
 <script setup>
-import { onMounted,ref } from "vue"
+import { onMounted, ref } from "vue"
 
 const done = ref(false)
 onMounted(() => {
     setTimeout(() => {
         done.value = true
-    }, 3000);
+    }, 2400);
 })
 </script>
 
@@ -39,5 +43,16 @@ onMounted(() => {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* we will explain what these classes do next! */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

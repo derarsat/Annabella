@@ -16,6 +16,10 @@
             <a class="px-4 py-3 hover:bg-primary text-lg" href="{{route("menus.index")}}"> Menus </a>
             <a class="px-4 py-3 hover:bg-primary text-lg" href="{{route("cuisines.index")}}"> Cuisines </a>
             <a class="px-4 py-3 hover:bg-primary text-lg" href="/admin/reservations"> Reservations</a>
+            <a class="px-4 mt-20" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> Logout </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                </form>
         </div>
     </div>
     <div class="col-span-4 ">

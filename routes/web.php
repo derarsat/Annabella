@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Auth::routes();
-Route::group(['prefix' => 'admin', 'middleware' => ['web']], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::view("/", 'admin.dashboard');
     Route::resource("gallery-images", \App\Http\Controllers\GalleryImageController::class);
     Route::resource("menus", MenuController::class);
